@@ -45,6 +45,23 @@ self.addEventListener('fetch', event => {
         event.respondWith(fetch('./images/img2.png'));
     }
 
+
+
+    /* 
+    Atrapar un 404 y cambiar esa imagen.
+    
+           fetch(event.request.url).then(data => {
+        console.log(data)
+        if(data.ok){
+            event.respondWith(data)
+        }else{
+            const generic = fetch('./images/img2.png')
+            event.respondWith(generic)
+        }
+    }).catch(err => console.error("SW: err " + err))
+    
+    */
+
 })
 
 //https://github.com/HectorSaldes/AWP_U1_P2.git
